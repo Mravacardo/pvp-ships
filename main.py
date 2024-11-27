@@ -125,9 +125,9 @@ def main():
                     bullet = pygame.Rect(yellow.x + yellow.width, yellow.y + yellow.height//2 - 2, 10, 5)
                     yellow_bullets.append(bullet)
 
-                    if event.key == pygame.K_m and len(red_bullets) < MAX_BULLETS:
-                        bullet = pygame.Rect(red.x, red.y + red.height//2 - 2, 10, 5)
-                        red_bullets.append(bullet)
+                if event.key == pygame.K_RSHIFT and len(red_bullets) < MAX_BULLETS:
+                    bullet = pygame.Rect(red.x, red.y + red.height//2 - 2, 10, 5)
+                    red_bullets.append(bullet)
 
             if event.type == RED_HIT:
                 red_health -= 1
